@@ -50,7 +50,3 @@ class YamlConverte(object):
                 return None
             self.variant = self.variant[key]
         return self.variant
-
-yaml_load = YamlConverte("yml")
-aaa = yaml_load.yaml("chatbot:utils.util.word.test")
-print(aaa)
