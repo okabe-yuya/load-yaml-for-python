@@ -58,8 +58,12 @@ class YamlLoader(object):
                 variant = variant.replace('{'+ attribute_symbol +'}', attribute)
         return variant
 
-yml = YamlLoader("yml")
-aaa = "oooo"
-print(yml.yaml(f'test.foo.bar@{aaa}'))
-print(yml.yaml(f'test.foo.tmp'))
-print(yml.yaml(f'test.foo.ymd@{aaa}'))
+def sample():
+    yml = YamlLoader("yml")
+    aaa = "oooo"
+    print(yml.yaml(f'test.foo.bar@{aaa}'))
+    print(yml.yaml(f'test.foo.tmp'))
+    print(yml.yaml(f'test.foo.ymd@{aaa}'))
+
+if __name__=='__main__':
+    sample()
