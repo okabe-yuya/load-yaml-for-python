@@ -4,7 +4,7 @@ import glob
 import re
 
 
-class YamlConverte(object):
+class YamlLoader(object):
     """
       you defined any yaml file in directory
       this class load all yaml file and use for Variant(string or number(integer)) in python grammer
@@ -40,13 +40,26 @@ class YamlConverte(object):
             yaml_list[key_name.replace(self.extension, "")] = data
         return yaml_list
 
-    def yaml(self, path):
+    def yaml(self, path, attribute_symbol="@"):
         """find in dictionary(convert yaml), uses argument path """
+        variant = self.variant
+        attribute = False
         if self.is_exist_dir == False:
-            return None
+            return "not found dir"
         target_path = path.split(".")
         for key in target_path:
-            if key not in self.variant.keys():
-                return None
-            self.variant = self.variant[key]
-        return self.variant
+            if attribute_symbol in key:
+                attribute = key[key.find(attribute_symbol)+1::]
+                key = key[:key.find(attribute_symbol)]
+            if key not in variant.keys():
+                return "not found"
+            variant = variant[key]
+            if attribute:
+                variant = variant.replace('{'+ attribute_symbol +'}', attribute)
+        return variant
+
+yml = YamlLoader("yml")
+aaa = "oooo"
+print(yml.yaml(f'test.foo.bar@{aaa}'))
+print(yml.yaml(f'test.foo.tmp'))
+print(yml.yaml(f'test.foo.ymd@{aaa}'))

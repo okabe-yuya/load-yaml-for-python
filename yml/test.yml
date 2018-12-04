@@ -1,3 +1,4 @@
 foo:
-  bar: A
+  bar: '{@}さん、こんにちは{@}'
   tmp: B
+  ymd: '{@}YYYY年MM月DD日'
