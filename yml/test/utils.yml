@@ -1,3 +1,4 @@
 util:
+  hello: '{@}さん。こんにちは'
   word:
     test: okabe

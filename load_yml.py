@@ -64,6 +64,6 @@ def sample():
     print(yml.yaml(f'test.foo.bar@{aaa}'))
     print(yml.yaml(f'test.foo.tmp'))
     print(yml.yaml(f'test.foo.ymd@{aaa}'))
-
+    print(yml.yaml(f'test:utils.util.hello@{aaa}'))
 if __name__=='__main__':
     sample()
