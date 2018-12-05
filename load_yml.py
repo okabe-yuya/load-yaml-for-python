@@ -1,8 +1,6 @@
 import yaml
 import os
 import glob
-import re
-
 
 class YamlLoader(object):
     """
@@ -57,13 +55,3 @@ class YamlLoader(object):
             if attribute:
                 variant = variant.replace('{'+ attribute_symbol +'}', attribute)
         return variant
-
-def sample():
-    yml = YamlLoader("yml")
-    aaa = "oooo"
-    print(yml.yaml(f'test.foo.bar@{aaa}'))
-    print(yml.yaml(f'test.foo.tmp'))
-    print(yml.yaml(f'test.foo.ymd@{aaa}'))
-    print(yml.yaml(f'test:utils.util.hello@{aaa}'))
-if __name__=='__main__':
-    sample()

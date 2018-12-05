@@ -1,4 +1,6 @@
 foo:
-  bar: '{@}さん、こんにちは{@}'
+  bar: '{@}さん、こんにちは'
   tmp: B
-  ymd: '{@}YYYY年MM月DD日'
+
+format:
+  ymd: "%Y/%m/%d"
