@@ -1,10 +1,14 @@
 # load-yaml-for-python
 pythonでymlファイルにi18nextみたく変数を置きたかったので作った
 
-## argument
+## Instance arguments
 - dir_name => ymlファイルを格納している一番親のディレクトリ
-- extension => ファイルの拡張子(default=yml)
-- dir_symbol => ymlファイルの上階層にディレクトリがある場合に使用するシンボル(default=:)
+- extension => ファイルの拡張子(もちろん default="yml")
+- dir_symbol => ymlファイルの上階層にディレクトリがある場合に使用するシンボル(default=":")
+
+## Method arguments
+- path => ymlファイル内の変数までのパス(例を参考に)
+- attribute_symbol => ymlファイル内の変数に別変数を代入する際に使用するシンボル(default="@")
 
 ## 使い方と例
 ### フォルダ階層
