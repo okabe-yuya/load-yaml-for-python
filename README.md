@@ -1,12 +1,10 @@
 # load-yaml-for-python
-defined variants in yaml file, this script can load these and get 
-you defined any yaml file in directory
-this class load all yaml file and use for Variant(string or number(integer)) in python grammer
+pythonでymlファイルにi18nextみたく変数を置きたかったので作った
 
 ## argument
-- dir_name => parent directory you put yaml file
-- extension => target extension(default = yml)
-- dir_symbol => decided to symbol for serach path
+- dir_name => ymlファイルを格納している一番親のディレクトリ
+- extension => ファイルの拡張子(default=yml)
+- dir_symbol => ファイルのパスのシンボル(default=@)
 
 ## how to use and example
 -yml
@@ -20,5 +18,7 @@ this class load all yaml file and use for Variant(string or number(integer)) in 
   get[test.yml in test]: yml.yaml("test.test")
   get[bar.yml in test]: yml.yaml("Foo:bar.test")
 
-if yaml method return values is None
-dir_name or path is wrong!!!!!! please check again
+## あれ値が返ってこない(None)
+- 指定している親ディレクトリの名前が違うか、同じものがある可能性
+- ファイルのパスが間違っている
+- シンボル記号が間違っている など
