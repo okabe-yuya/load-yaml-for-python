@@ -17,10 +17,10 @@ pythonでymlファイルにi18nextみたく変数を置きたかったので作�
   yml = YamlConverte("yml")
   
 2. yamlメゾットに以下のようにパスを指定。親ディレクトリがある場合はFoo:のように指定
-  // get[test.yml in test] (no parent directory)
-      yml.yaml("test.test")
-  // get[bar.yml in test] (exist parent directory)
-      yml.yaml("Foo:bar.test")
+  - get[test.yml in test] (no parent directory)
+    - yml.yaml("test.test")
+  - get[bar.yml in test] (exist parent directory)
+    - yml.yaml("Foo:bar.test")
 
 ## あれ値が返ってこない(None)
 - 指定している親ディレクトリの名前が違うか、同じものがある可能性
